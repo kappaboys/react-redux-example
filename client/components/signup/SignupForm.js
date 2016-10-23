@@ -44,6 +44,7 @@ export default class SignupForm extends React.Component {
 
             this.props.userSignupRequest(this.state).then(
                 () => {
+                    this.context.router.push('/');
                 },
                 ({data}) => this.setState({errors: data, isLoading: false})
             );
@@ -111,4 +112,8 @@ export default class SignupForm extends React.Component {
 
 SignupForm.propTypes = {
     userSignupRequest: React.PropTypes.func.isRequired
+};
+
+SignupForm.contextTypes = {
+    router: React.PropTypes.object.isRequired
 };
