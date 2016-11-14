@@ -16,6 +16,9 @@ export default class NavigationBar extends React.Component
 							<li>
 								<Link to="/signup">Sign up</Link>
 							</li>
+							<li>
+								<Link to="/login">Login</Link>
+							</li>
 						</ul>
 					</div>
 				</div>
