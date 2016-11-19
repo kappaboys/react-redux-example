@@ -16,6 +16,7 @@ class NavigationBar extends React.Component
 
         const userLinks = (
             <ul className="nav navbar-nav navbar-right">
+                <li><Link to="/new-event">New Event</Link></li>
                 <li><a href="#" onClick={this.logout.bind(this)}>Logout</a></li>
             </ul>
         );
@@ -55,12 +56,6 @@ NavigationBar.propTypes = {
 function mapStateToProps(state) {
     return {
         auth: state.auth
-    };
-}
-
-function mapDispatchToProps() {
-    return {
-        logout: logout
     };
 }
 
